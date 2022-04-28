@@ -1,0 +1,21 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomExpanderView"
+             x:Class="CustomExpanderView.App">
+    <Application.Resources>
+        <ResourceDictionary Source="Resources/Styles.xaml" />
+        <ResourceDictionary>
+            <x:String x:Key="IconCloudShowersHeavy">&#xf740;</x:String>
+            <x:String x:Key="IconList">&#xf03a;</x:String>
+            <x:String x:Key="IconAngleDown">&#xf107;</x:String>
+            <x:String x:Key="IconAngleUp">&#xf106;</x:String>
+            <x:String x:Key="IconDeny">&#xf00d;</x:String>
+            <x:String x:Key="IconPlus">&#xf067;</x:String>
+            <x:String x:Key="IconTrashFRS">&#xf2ed;</x:String>
+            <x:String x:Key="IconEdit">&#xf044;</x:String>
+            <x:String x:Key="IconMinus">&#xf068;</x:String>
+            <x:String x:Key="IconRefresh">&#xf021;</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

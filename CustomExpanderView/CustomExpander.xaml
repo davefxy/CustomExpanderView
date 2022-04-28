@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomExpanderView.CustomExpander"
+             x:Name="ExpanderView">
+
+    <Frame CornerRadius="10"
+           BorderColor="Orange"
+           BackgroundColor="White"
+           HasShadow="False"
+           Padding="0">
+
+        <Grid RowSpacing="0" RowDefinitions="Auto,Auto">
+
+            <Grid Grid.Row="0"
+                  Padding="8,6"
+                  BackgroundColor="Transparent">
+                <Label Text="{Binding Title, Source={x:Reference ExpanderView}}"
+                       VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="Medium" />
+                <Image HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       HeightRequest="14"
+                        Source="{Binding ExpandIcon, Source={x:Reference ExpanderView}}">
+                </Image>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="HeaderContent_OnTapped" />
+                </Grid.GestureRecognizers>
+
+            </Grid>
+
+            <!-- Header Bottom Border -->
+            <BoxView Grid.Row="0"
+                     Color="Blue"
+                     HeightRequest="1"
+                     Opacity="0.8"
+                     VerticalOptions="End"
+                     HorizontalOptions="FillAndExpand" />
+            <!--IsVisible="{Binding IsExpanded, Source={x:Reference ExpanderView}}" />-->
+
+            <!-- Content View -->
+            <ContentView Grid.Row="1"
+                         x:Name="BodyContentView"
+                         Padding="8,6"
+                         IsVisible="False" />
+        </Grid>
+    </Frame>
+</ContentView>
+             
